@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-function Square({ value }) {
- 
-return <button className="square">{value}</button>; //Board now stores the values,
+function Square({ value, onSquareClick }) {
+  return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
 export default function Board() {
          const [squares, setSquares] = useState(Array(9).fill(null));
