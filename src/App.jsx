@@ -4,10 +4,15 @@ function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
 export default function Board() {
+  const [xIsNext, setXIsNext] = useState(true); // is x next? 
          const [squares, setSquares] = useState(Array(9).fill(null));
          function handleClick(i) {
   const nextSquares = squares.slice();
+if (xIsNext) {
   nextSquares[i] = 'X';
+} else {
+  nextSquares[i] = 'O';
+} // 
   setSquares(nextSquares);
 }
   return (
