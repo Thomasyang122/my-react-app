@@ -7,7 +7,9 @@ export default function Board() {
   const [xIsNext, setXIsNext] = useState(true); // is x next? 
          const [squares, setSquares] = useState(Array(9).fill(null));
          function handleClick(i) {
-          if (squares[i]) {
+
+
+        if (calculateWinner(squares) || squares[i]) {
   return;
 }
   const nextSquares = squares.slice();
