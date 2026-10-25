@@ -21,8 +21,22 @@ if (xIsNext) {
   setSquares(nextSquares);
   setXIsNext(!xIsNext);
 }
+
+const winner = calculateWinner(squares);
+let status;
+
+if (winner) {
+  status = 'Winner: ' + winner;
+} else {
+  status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+}
+
+
+
   return (
     <>
+
+    <div className="status">{status}</div>
       <div className="board-row">
   
 
