@@ -14,6 +14,7 @@ if (xIsNext) {
   nextSquares[i] = 'O';
 } // 
   setSquares(nextSquares);
+  setXIsNext(!xIsNext);
 }
   return (
     <>
